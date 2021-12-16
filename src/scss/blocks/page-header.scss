@@ -1,0 +1,59 @@
+@mixin separator-line($position) {
+  &:#{$position} {
+    content: "";
+    display: block;
+    min-height: 32px;
+    min-width: 2px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+
+    @content;
+  }
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $space--sm;
+  background-color: white;
+
+  // Скрываем на десктопах
+  @include screen-lg {
+    display: none;
+  }
+
+  &__container-gap {
+    display: flex;
+    column-gap: $space--sm;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: $space--sm;
+    margin-right: $space--sm;
+
+    @media screen and (max-width: 320px) {
+      @include separator-line(after);
+    }
+
+    @include screen-md {
+      @include separator-line(before);
+      margin-right: $space--sm;
+    }
+  }
+
+  &__feedback-group {
+    display: none;
+
+    @include screen-md {
+      display: flex;
+      margin-left: auto;
+      margin-right: $space--sm;
+
+      @include separator-line(after);
+    }
+  }
+}

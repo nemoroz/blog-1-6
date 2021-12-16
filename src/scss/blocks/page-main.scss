@@ -1,0 +1,125 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space--md;
+
+  &__header {
+    @include container-right;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: ttlakes-bold, sans-serif;
+    font-size: $title-size;
+    color: $text-color--dark;
+
+    display: flex;
+    align-items: center;
+
+    @include highlight;
+    // На широких (от 1600) убираем highlight
+    @media screen and (min-width: 1920px) {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__repair-buttons {
+    margin-left: auto;
+
+    display: flex;
+    column-gap: $space--lg;
+  }
+
+  &__nav {
+    @include container-left($space--md);
+
+    padding: 0;
+
+    position: relative;
+    overflow-x: hidden;
+
+    &:after {
+      content: "";
+      display: block;
+      width: $space--md;
+      height: 100%;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    @include screen-lg {
+      overflow-x: visible;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-list {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    display: flex;
+    overflow-x: scroll;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    @include screen-lg {
+      overflow-x: visible;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    white-space: nowrap;
+    color: $text-color--light;
+    font-family: ttlakes-regular;
+    font-size: $text-size--large;
+
+    padding: 8px 20px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    border-radius: $corner;
+
+    &--current {
+      border-color: $color--alternate;
+      background-color: white;
+    }
+  }
+
+  &__about {
+    @include screen-md {
+      @include container-side;
+      justify-content: space-between;
+    }
+  }
+
+  &__shedule {
+    width: 100%;
+
+    @include screen-md {
+      max-width: 360px;
+      max-height: 208px;
+    }
+
+    @include screen-lg {
+      max-width: 531px;
+      max-height: 308px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.sidebar {
+  @include screen-lg {
+    box-shadow: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  row-gap: $space--sm;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  transition-property: transform opacity;
+  transition-duration: $transition-duration--long;
+
+  &--leave {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &__header {
+    @include modal-container;
+
+    display: flex;
+    column-gap: $space--sm;
+    align-items: center;
+    min-height: $header--height;
+  }
+
+  &__button-close {
+    @include screen-lg {
+      display: none;
+    }
+  }
+
+  &__button-search {
+    margin-left: auto;
+  }
+
+  &__nav {
+    overflow-y: scroll;
+  }
+
+  &-nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__nav-item {
+    @include space-gradate(padding-left);
+
+    font-family: ttlakes-regular;
+    font-size: $text-size--small;
+    color: $text-color--dark;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: $text-color--light;
+    }
+
+    &:active {
+      color: $color--main;
+    }
+
+    &--current {
+      @include highlight;
+
+      &,
+      &:hover,
+      &:active {
+        color: $text-color--light;
+      }
+    }
+  }
+
+  &__footer {
+    @include modal-container($top: auto);
+    margin-top: auto;
+    padding-bottom: 10px;
+  }
+
+  &__contacts {
+    margin-top: $space--sm;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__email {
+    font-family: ttlakes-medium;
+    font-size: $text-size--large;
+    color: $text-color--dark;
+  }
+
+  &__phone {
+    font-family: ttlakes-bold;
+    font-size: 2.4rem;
+    color: $text-color--dark;
+  }
+
+  &__lang-switch {
+    display: flex;
+    column-gap: 7px;
+  }
+
+  &__button-lang {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-top: $space--sm;
+
+    font-family: ttlakes-medium;
+    font-size: $text-size--large;
+    color: $text-color--dark;
+
+    text-transform: uppercase;
+  }
+
+  &__button-lang--current {
+    color: $text-color--light;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./vars.scss";
+@import "./media.scss";
+@import "./text.scss";
+@import "./reset.scss";
+@import "./helpers.scss";
+@import "./swiper-custom.scss";
+
+// Миксины
+@import "./abstract-mixins/flex.scss";
+@import "./abstract-mixins/highlight.scss";
+@import "./abstract-mixins/containers.scss";
+@import "./abstract-mixins/button-round.scss";
+
+// Кнопки
+@import "./blocks/buttons/button-round.scss";
+@import "./blocks/buttons/button-fill.scss";
+@import "./blocks/buttons/button-order.scss";
+@import "./blocks/buttons/button-toggle.scss";
+@import "./blocks/buttons/button-complex.scss";
+@import "./blocks/buttons/button-commerce.scss";
+
+// Карточки
+@import "./blocks/cards/card.scss";
+@import "./blocks/cards/brand-card.scss";
+@import "./blocks/cards/techtype-card.scss";
+@import "./blocks/cards/price-card.scss";
+
+// Комплексы маленьких элементов
+@import "./blocks/feedback-group.scss";
+
+// Блоки
+@import "./blocks/modal.scss";
+@import "./blocks/sidebar.scss";
+@import "./blocks/sidebar-locker.scss";
+@import "./blocks/page.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/main-about.scss";
+@import "./blocks/cards-section.scss";
+@import "./blocks/page-footer.scss";
+
+::selection {
+  background-color: $color--main;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color--main;
+  border-radius: 6px;
+  transition: background-color $transition-duration--short;
+
+  &:active {
+    background-color: $color--alternate;
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

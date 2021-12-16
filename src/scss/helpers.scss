@@ -1,0 +1,13 @@
+@mixin bg {
+  background-color: rgba(navy, 0.1) !important;
+  box-shadow: 0 0 0 2px darkcyan !important;
+  color: navy !important;
+}
+
+[bg] {
+  @include bg;
+}
+
+[hidden] {
+  display: none !important;
+}

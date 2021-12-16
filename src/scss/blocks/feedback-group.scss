@@ -1,0 +1,3 @@
+.feedback-group {
+  @include flex(flex-start, $cgap: $space--sm);
+}

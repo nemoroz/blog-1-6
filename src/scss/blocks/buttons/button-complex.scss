@@ -1,0 +1,13 @@
+.button-complex {
+  cursor: pointer;
+
+  font-family: ttlakes-medium;
+  font-size: $text-size--large;
+  color: $text-color--dark;
+  user-select: none;
+  display: none;
+
+  @include screen-lg {
+    @include flex($display: inline-flex, $cgap: 8px);
+  }
+}

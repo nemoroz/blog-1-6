@@ -1,0 +1,100 @@
+.modal {
+  transition-property: opacity transform;
+  transition-duration: $transition-duration--long;
+
+  &--leave {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+
+  &__header {
+    min-height: $header--height;
+    display: flex;
+    flex-direction: column;
+    row-gap: $space--lg;
+    margin-top: $space--md;
+  }
+
+  &__button-close {
+    @include modal-container;
+    @include screen-md {
+      position: absolute;
+      right: 440px;
+      top: 55px;
+    }
+  }
+
+  &__title {
+    @include highlight;
+
+    font-family: ttlakes-bold, sans-serif;
+    font-size: 2.4rem;
+    color: $text-color--dark;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &__input-group {
+    @include flex($fldir: column, $rgap: $space--sm);
+    @include modal-container;
+    margin-top: $space--md;
+    overflow-y: scroll;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px $space--sm;
+    box-sizing: border-box;
+    border-radius: $corner;
+
+    font-family: ttlakes-medium, sans-serif;
+    font-size: $text-size--large;
+
+    border: 1px solid #eaeaea;
+    outline: none;
+    cursor: pointer;
+
+    &,
+    &::placeholder {
+      color: #eaeaea;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $text-color--light;
+
+      &,
+      &::placeholder {
+        color: $text-color--light;
+      }
+    }
+  }
+
+  &__input--area {
+    height: 20vh;
+    max-height: 118px;
+    resize: none;
+  }
+
+  &__footer {
+    @include flex($fldir: column, $rgap: 19px, $ai: flex-start);
+    @include modal-container;
+
+    padding-top: $space--sm;
+  }
+
+  &__note {
+    font-family: ttlakes-medium;
+    font-size: $text-size--small;
+    color: $text-color--light;
+  }
+
+  &__note-warning {
+    color: $color--main;
+  }
+
+  &__button-submit {
+    align-self: flex-end;
+  }
+}

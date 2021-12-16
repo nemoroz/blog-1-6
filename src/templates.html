@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template>
+      <!-- Модалка "обратная связь" -->
+      <div class="page__modal modal">
+        <header class="modal__header">
+          <div class="modal__container-side">
+            <button class="button-round">
+              <img src="/src/img/round-button/close.svg" alt="close modal" />
+            </button>
+          </div>
+
+          <h1 class="modal__title">Обратная связь</h1>
+        </header>
+
+        <form class="modal__form modal__container-side">
+          <div class="modal__input-group">
+            <input
+              class="modal__input"
+              type="text"
+              name="user_name"
+              required
+              placeholder="Имя"
+            />
+            <input
+              class="modal__input"
+              type="tel"
+              name="user_phone"
+              required
+              placeholder="Телефон"
+            />
+            <input
+              class="modal__input"
+              type="email"
+              name="user_email"
+              required
+              placeholder="Электронная почта"
+            />
+            <textarea
+              class="modal__input modal__input--area"
+              name="user_message"
+              placeholder="Сообщение"
+            ></textarea>
+          </div>
+
+          <footer class="modal__footer">
+            <span class="modal__note">
+              Нажимая “отправить”, вы даете согласие
+              <strong class="modal__note-warning">
+                на обработку персональных данных
+              </strong>
+              и соглашаетесь с нашей
+              <strong class="modal__note-warning">
+                политикой конфиденциальности
+              </strong>
+            </span>
+
+            <button class="button-order modal__button-submit">
+              <span>Отправить</span>
+              <img src="/src/img/order.svg" alt="" />
+            </button>
+          </footer>
+        </form>
+      </div>
+      <!-- Модалка "заказать звонок" -->
+      <div class="page__modal modal">
+        <header class="modal__header">
+          <div class="modal__container-side">
+            <button class="button-round">
+              <img src="/src/img/round-button/close.svg" alt="close modal" />
+            </button>
+          </div>
+
+          <h1 class="modal__title">Заказать звонок</h1>
+        </header>
+
+        <form class="modal__form modal__container-side">
+          <div class="modal__input-group">
+            <input
+              class="modal__input"
+              type="tel"
+              name="user_phone"
+              required
+              placeholder="Телефон"
+            />
+          </div>
+
+          <footer class="modal__footer">
+            <span class="modal__note">
+              Нажимая “отправить”, вы даете согласие
+              <strong class="modal__note-warning">
+                на обработку персональных данных
+              </strong>
+              и соглашаетесь с нашей
+              <strong class="modal__note-warning">
+                политикой конфиденциальности
+              </strong>
+            </span>
+
+            <button class="button-order modal__button-submit">
+              <span>Отправить</span>
+              <img src="/src/img/order.svg" alt="" />
+            </button>
+          </footer>
+        </form>
+      </div>
+      <!-- Круглая кнопка с иконкой -->
+      <button class="button-round">
+        <img src="/src/img/round-button/close.svg" alt="" />
+      </button>
+      <!-- Окольцованная кнопка на карточках-->
+      <button class="button-round button-round--void">
+        <img src="/src/img/round-button/to-detail.svg" alt="" />
+      </button>
+      <!-- Кнопка заказа -->
+      <button class="button-order">
+        <span>Заказать</span>
+        <img src="/src/img/order.svg" alt="" />
+      </button>
+      <!-- Кнопка "скрыть/показать все" -->
+      <button class="button-toggle">
+        <!-- Картинка в открытом состоянии --expand -->
+        <img
+          src="/src/img/show-all.svg"
+          alt="oops"
+          class="button-toggle__image"
+        />
+        <span class="button-toggle__text">Читать далее</span>
+      </button>
+      <!-- Карточка бренда -->
+      <div class="card brand-card">
+        <div class="brand-card__brand">
+          <img src="/src/img/brands/lenovo-brand.png" alt="Lenovo" />
+        </div>
+
+        <button class="button-round button-round--void">
+          <img src="/src/img/round-button/to-detail.svg" alt="" />
+        </button>
+      </div>
+      <!-- Карточка типа -->
+      <div class="card techtype-card">
+        <span class="techtype-card__text">Ремонт ноутбуков </span>
+        <button
+          class="techtype-card__to-detail button-round button-round--void"
+        >
+          <img src="/src/img/round-button/to-detail.svg" alt="" />
+        </button>
+      </div>
+      <!-- Карточка цены -->
+      <div class="card card--no-border price-card">
+        <div class="price-card__info">
+          <span class="price-card__info-head">Ремонтные услуги</span>
+          <span class="price-card__info-body">
+            Тестирование с выдачей технического заключения
+          </span>
+        </div>
+
+        <div class="price-card__info">
+          <span class="price-card__info-head">Цена</span>
+          <span class="price-card__info-body">Бесплатно</span>
+        </div>
+
+        <footer class="price-card__footer">
+          <div class="price-card__info">
+            <span class="price-card__info-head">Срок</span>
+            <span class="price-card__info-body">30-120 мин</span>
+          </div>
+
+          <button class="button-order">
+            <span>Заказать</span>
+            <img src="/src/img/order.svg" alt="" />
+          </button>
+        </footer>
+      </div>
+      <!-- Группа иконок обратной связи -->
+      <div class="feedback-group">
+        <button class="button-round">
+          <img src="/src/img/round-button/phone.svg" alt="" />
+        </button>
+
+        <button class="button-round">
+          <img src="/src/img/round-button/chat.svg" alt="" />
+        </button>
+
+        <button class="button-round">
+          <img src="/src/img/round-button/auth.svg" alt="" />
+        </button>
+      </div>
+      <!-- Расширенная кнопка "оставить заявку", "узнать статус заявки" -->
+      <label class="button-complex">
+        <span>Оставить заявку</span>
+        <button class="button-round">
+          <img src="/src/img/round-button/repair.svg" alt="" />
+        </button>
+      </label>
+    </template>
+  </body>
+</html>

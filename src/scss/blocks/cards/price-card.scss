@@ -1,0 +1,77 @@
+.price-card {
+  font-size: $text-size--small;
+  box-sizing: border-box;
+
+  @include screen-md {
+    padding-bottom: 0;
+  }
+
+  // .price-card__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include screen-md {
+      display: grid;
+      grid-template-columns: 3fr 1fr 2fr;
+      justify-content: space-between;
+      gap: $space--sm;
+      width: 100%;
+    }
+  }
+
+  // .price-card__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    @include screen-md {
+      justify-content: center;
+    }
+
+    // .price-card__info-head
+    &-head {
+      color: $text-color--light;
+      font-family: ttlakes-medium;
+
+      @include screen-md {
+        display: none;
+      }
+    }
+
+    // .price-card__info-body
+    &-body {
+      color: $text-color--dark;
+      font-family: ttlakes-regular;
+      white-space: normal;
+
+      @include screen-md {
+        white-space: nowrap;
+        min-height: 64px;
+
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  // .price-card__footer
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include screen-md {
+      column-gap: 50px;
+    }
+  }
+}
+
+.price-card:not(:last-child) .price-card__inner {
+  @include screen-md {
+    border-bottom: 1px solid #eaeaea;
+  }
+}

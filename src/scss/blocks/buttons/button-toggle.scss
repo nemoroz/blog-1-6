@@ -1,0 +1,35 @@
+.button-toggle {
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  column-gap: $space--sm;
+
+  font-family: ttlakes-medium;
+  color: $text-color--dark;
+  font-size: $text-size--small;
+
+  &__image {
+    transition: transform $transition-duration--short;
+  }
+
+  cursor: pointer;
+  transition: color $transition-duration--short;
+  &:hover {
+    color: lighten($text-color--dark, 20%);
+  }
+
+  &:active,
+  &:focus {
+    color: $text-color--light;
+  }
+}
+
+.button-toggle--expand {
+  color: $color--alternate;
+
+  img {
+    transform: rotate(180deg);
+  }
+}

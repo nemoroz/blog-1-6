@@ -1,0 +1,11 @@
+.techtype-card {
+  &__text {
+    font-family: ttlakes-medium, sans-serif;
+    color: $text-color--dark;
+    font-size: $text-size--large;
+  }
+
+  &__to-detail {
+    align-self: flex-end;
+  }
+}

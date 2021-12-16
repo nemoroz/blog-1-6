@@ -1,0 +1,15 @@
+@mixin flex(
+  $jc: space-between,
+  $ai: center,
+  $fldir: row,
+  $cgap: 0,
+  $rgap: 0,
+  $display: flex
+) {
+  display: $display;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fldir;
+  column-gap: $cgap;
+  row-gap: $rgap;
+}

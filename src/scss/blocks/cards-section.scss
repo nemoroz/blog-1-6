@@ -1,0 +1,91 @@
+.cards-section {
+  &__title {
+    font-family: ttlakes-regular;
+    font-size: $text-size--large;
+    text-transform: uppercase;
+    color: $text-color--light;
+
+    padding: $space--sm $space--md;
+    border-top: 1px solid $color--alternate;
+
+    background: linear-gradient(270deg, white 0%, #f8f8f8 98.61%);
+    box-sizing: border-box;
+
+    @include container-center;
+  }
+
+  &__brand,
+  &__techtype {
+    max-width: 240px;
+  }
+
+  &__brand {
+    max-height: 72px;
+  }
+
+  &__techtype {
+    min-height: 160px;
+  }
+
+  &__price {
+    min-height: 200px;
+    max-width: 260px;
+
+    @include screen-md {
+      min-height: 30px;
+      padding-top: 0;
+      min-width: 100%;
+    }
+  }
+
+  &__cards {
+    @include container-left($space--md);
+    margin-top: $space--md;
+
+    perspective: 1000;
+    transform-style: preserve-3d;
+  }
+
+  &__cards--to-grid {
+    @include screen-md {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 240px);
+      justify-content: space-between;
+      gap: $space--sm;
+    }
+  }
+
+  &__cards--to-column {
+    @include screen-md {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__note {
+    @include container-side($space--lg, $space--lg);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $space--sm;
+  }
+
+  &__note-text {
+    font-family: ttlakes-regular;
+    color: $text-color--dark;
+    font-size: $text-size--small;
+
+    width: 70%;
+  }
+
+  &__show-all {
+    @include container-left($space--sm);
+
+    display: none;
+
+    @include screen-md {
+      display: flex;
+      margin-top: $space--lg;
+    }
+  }
+}

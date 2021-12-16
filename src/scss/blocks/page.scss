@@ -1,0 +1,66 @@
+.page {
+  background-color: $color--global-bg;
+
+  @include screen-lg {
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-auto-rows: minmax(100vh, auto);
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(white, 0.96);
+    z-index: 2;
+
+    transition: opacity $transition-duration--long;
+  }
+
+  &__overlay--near {
+    z-index: 4;
+  }
+
+  &__overlay--leave {
+    opacity: 0;
+    z-index: -2;
+  }
+
+  &__content {
+    margin-top: $space--md;
+  }
+
+  &__sidebar,
+  &__modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    // max-height: 100vh;
+    background-color: white;
+    width: 100%;
+  }
+
+  &__sidebar {
+    left: 0;
+    z-index: 3;
+
+    @media screen and (min-width: 360px) {
+      max-width: 320px;
+    }
+  }
+
+  &__modal {
+    right: 0;
+    z-index: 5;
+
+    max-width: 440px;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+
+  &__header {
+    min-height: $header--height;
+  }
+}

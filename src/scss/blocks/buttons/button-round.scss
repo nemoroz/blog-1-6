@@ -1,0 +1,23 @@
+$button-round--size: 40px;
+$button-round--bg: $color--main;
+$button-round--corner: 50%;
+
+.button-round {
+  cursor: pointer;
+  width: $button-round--size;
+  height: $button-round--size;
+  background-color: $button-round--bg;
+
+  border-radius: $button-round--corner;
+  border: none;
+  outline: none;
+
+  @include button;
+  @include flex(center, center);
+
+  // .button-round--void
+  &--void {
+    background-color: transparent;
+    border: 2px solid $button-round--bg;
+  }
+}

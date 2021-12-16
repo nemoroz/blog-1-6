@@ -1,0 +1,18 @@
+.swiper-pagination {
+  position: static;
+  margin-top: $space--sm;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #b5b6bc;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #dddddd;
+}

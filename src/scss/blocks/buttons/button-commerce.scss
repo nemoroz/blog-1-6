@@ -1,0 +1,32 @@
+.button-commerce {
+  background-color: transparent;
+  border: none;
+
+  font-family: ttlakes-regular;
+  font-size: $text-size--small;
+  color: $text-color--dark;
+
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  padding: 0;
+
+  transition-property: color filter;
+  transition-duration: $transition-duration--short;
+
+  &:hover {
+    color: black;
+    filter: drop-shadow(0 0 10px black);
+  }
+
+  &:active {
+    color: $text-color--light;
+  }
+
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    filter: drop-shadow(0 0 15px $color--alternate);
+  }
+}

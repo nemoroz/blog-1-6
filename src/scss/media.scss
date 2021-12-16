@@ -1,0 +1,35 @@
+@mixin media($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @include media($break-point--md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @include media($break-point--lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @include media($break-point--xl) {
+    @content;
+  }
+}
+
+@mixin space-gradate($option) {
+  #{$option}: $space--sm;
+
+  @include screen-md {
+    #{$option}: $space--md;
+  }
+
+  @include screen-lg {
+    #{$option}: $space--lg;
+  }
+}

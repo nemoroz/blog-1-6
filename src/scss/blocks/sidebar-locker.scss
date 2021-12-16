@@ -1,0 +1,10 @@
+/* blocks/sidebar-locker.scss */
+.sidebar-locker {
+  display: none;
+  background-color: white;
+
+  @include screen-lg {
+    display: block;
+  }
+}
+/* / blocks/sidebar-locker.scss */

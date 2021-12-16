@@ -1,0 +1,25 @@
+/* -> highlight.scss */
+@mixin highlight {
+  @include space-gradate(padding-left);
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    min-width: 4px;
+    height: 100%;
+    background-color: $color--alternate;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-top-right-radius: $corner;
+    border-bottom-right-radius: $corner;
+
+    @include screen-lg {
+      border-radius: $corner;
+    }
+  }
+}
+/* / -> highlight.scss */

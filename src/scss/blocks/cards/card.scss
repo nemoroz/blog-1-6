@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: $space--sm;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-radius: $corner;
+  background-color: white;
+
+  &--no-border {
+    border: none;
+  }
+
+  cursor: pointer;
+
+  transition-property: box-shadow transform;
+  transition-duration: $transition-duration--short;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 2px darken(#eaeaea, 5%);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 2px rgba($color--alternate, 0.5);
+    transform: scale(0.98);
+  }
+}

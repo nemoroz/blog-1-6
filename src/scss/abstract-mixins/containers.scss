@@ -1,0 +1,58 @@
+@mixin container-center {
+  @media screen and (min-width: 1920px) {
+    width: 1300px;
+    margin: 0 auto;
+
+    @content;
+  }
+}
+
+@mixin container-right {
+  margin-right: $space--sm;
+
+  @include screen-md {
+    margin-right: $space--md;
+  }
+
+  @include screen-lg {
+    margin-right: $space--lg;
+  }
+
+  @include container-center;
+}
+
+@mixin container-left($top: 0, $bottom: 0) {
+  margin: $top 0 $bottom $space--sm;
+
+  @include screen-md {
+    margin: $top $space--md $bottom $space--md;
+  }
+
+  @include screen-lg {
+    margin: $top $space--lg $bottom $space--lg;
+  }
+
+  @include container-center;
+}
+
+@mixin container-side($top: 0, $bottom: 0) {
+  margin: $top $space--sm $bottom $space--sm;
+
+  @include screen-md {
+    margin: $top $space--md $bottom $space--md;
+  }
+
+  @include screen-lg {
+    margin: $top $space--lg $bottom $space--lg;
+  }
+
+  @include container-center;
+}
+
+@mixin modal-container($top: 0, $bottom: 0) {
+  margin: $top $space--sm $bottom $space--sm;
+
+  @media screen and (min-width: 360px) {
+    margin: $top $space--md $bottom $space--md;
+  }
+}

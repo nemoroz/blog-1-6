@@ -1,0 +1,40 @@
+.main-about {
+  @include screen-md {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $space--sm;
+
+  &__text-block {
+    @include container-side;
+    @include screen-md {
+      margin: 0;
+      width: 50%;
+    }
+
+    font-family: ttlakes-regular;
+    font-size: $text-size--small;
+    color: $text-color--dark;
+  }
+
+  &__read-more {
+    margin: $space--sm 0 0 ($space--sm / 2);
+  }
+
+  &__shedule {
+    object-fit: cover;
+    width: 100%;
+
+    @include screen-md {
+      max-width: 360px;
+      max-height: 208px;
+    }
+
+    @include screen-lg {
+      max-width: 530px;
+      max-height: 307px;
+    }
+  }
+}

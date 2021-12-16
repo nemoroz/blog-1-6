@@ -1,0 +1,31 @@
+.page-footer {
+  border-top: 1px solid $color--alternate;
+  min-height: 105px;
+
+  font-family: ttlakes-regular;
+  font-size: $text-size--small;
+  color: $text-color--light;
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $space--md;
+    padding: $space--sm 0;
+    @include container-side;
+    @include screen-md {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      align-items: center;
+
+      .page-footer__top {
+        text-align: left;
+      }
+
+      .page-footer__bottom {
+        text-align: right;
+      }
+    }
+  }
+}
